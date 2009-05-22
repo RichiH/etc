@@ -331,3 +331,8 @@
 ; I use this for esvn-mode. What ever happened to "reserved for users"?
 (define-key org-mode-map "\C-c\C-c" nil)
 
+;;; icicles
+(add-to-list 'load-path (emacs-d "packages/icicles"))
+(require 'icicles)
+(icy-mode)
+;;; end icicles
