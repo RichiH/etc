@@ -334,6 +334,23 @@
 ;;; icicles
 (add-to-list 'load-path (emacs-d "packages/icicles"))
 (require 'icicles)
+;; invert tab to be apropos-complete (as in iswitchb) and S-tab to be
+;; prefix-complete (because why not?)
+(let ((tmp icicle-prefix-complete-keys))
+  (setq icicle-prefix-complete-keys icicle-apropos-complete-keys)
+  (setq icicle-apropos-complete-keys tmp))
+
+;; make pgup/pgdown ("next" and "prior" on this machine here) be modal
+;; instead of always apropos
+(setq icicle-modal-cycle-up-keys '([next]))
+(setq icicle-modal-cycle-down-keys '([prior]))
+
+;; don't make up/down stop being command-history access; I still use
+;; them this way too much
+(setq icicle-prefix-cycle-next-keys '())
+(setq icicle-prefix-cycle-previous-keys '())
+
+
 (icy-mode)
 (require 'lacarte)
 (global-set-key [?\e ?\M-x] 'lacarte-execute-menu-command)
