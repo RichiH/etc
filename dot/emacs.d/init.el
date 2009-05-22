@@ -335,4 +335,6 @@
 (add-to-list 'load-path (emacs-d "packages/icicles"))
 (require 'icicles)
 (icy-mode)
+(require 'lacarte)
+(global-set-key [?\e ?\M-x] 'lacarte-execute-menu-command)
 ;;; end icicles
