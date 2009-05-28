@@ -138,6 +138,7 @@
  '(column-number-mode t)
  '(compilation-scroll-output t)
  '(display-buffer-reuse-frames t)
+ '(icicle-candidate-width-factor 100)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(require-final-newline ask)
