@@ -350,7 +350,7 @@
 ;; them this way too much
 (setq icicle-prefix-cycle-next-keys '())
 (setq icicle-prefix-cycle-previous-keys '())
-
+(setq completion-case-insensitive t)  ; FIXME: not sure about this globally?
 
 (icy-mode)
 (require 'lacarte)
